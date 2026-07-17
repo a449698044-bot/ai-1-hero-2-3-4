@@ -22,26 +22,27 @@ import BorderGlow from './BorderGlow';
 import usePortfolioMotion from './usePortfolioMotion';
 import './styles.css';
 
-const VIDEO_COS_BASE = 'https://qiyue-1455073558.cos.ap-guangzhou.myqcloud.com/videos';
-const videoAsset = (fileName) => `${VIDEO_COS_BASE}/${fileName}`;
+const COS_ASSET_BASE = 'https://qiyue-1455073558.cos.ap-guangzhou.myqcloud.com/videos';
+const cloudAsset = (fileName) => `${COS_ASSET_BASE}/${fileName}`;
+const videoAsset = cloudAsset;
 
 const projectCards = [
   {
     title: '柒月商业摄影',
     category: '影像品牌 / 商业摄影',
-    image: './assets/project-content.png',
+    image: cloudAsset('project-content.png'),
     summary: '全国接单，覆盖美食摄影、电商产品、人像服装、白酒摄影、广告片与电商视频拍摄。',
   },
   {
     title: '智能视觉广告',
     category: '智能视觉 / 广告创意',
-    image: './assets/project-ai.png',
+    image: cloudAsset('project-ai.png'),
     summary: '以智能生成工作流辅助品牌视觉探索，从概念设定到主视觉延展保持统一质感。',
   },
   {
     title: '品牌视觉系统',
     category: '品牌设计 / 视觉系统',
-    image: './assets/brand-system.png',
+    image: cloudAsset('brand-system.png'),
     summary: '为品牌建立可持续使用的视觉语言，兼顾识别度、传播效率和商业落地。',
   },
 ];
@@ -104,155 +105,155 @@ const sceneCards = [
   {
     title: '五粮液天猫官方旗舰店白酒系列拍摄',
     label: 'WULIANGYE TMALL SERIES',
-    image: './assets/wuliangye-snake-15.jpg',
+    image: cloudAsset('wuliangye-snake-15.jpg'),
     text: '围绕蛇年限定礼盒与白酒产品质感，打造更有节庆记忆点的电商视觉场景。',
     gallery: [
-      './assets/wuliangye-snake-01.jpg',
-      './assets/wuliangye-snake-02.jpg',
-      './assets/wuliangye-snake-03.jpg',
-      './assets/wuliangye-snake-04.jpg',
-      './assets/wuliangye-snake-05.jpg',
-      './assets/wuliangye-snake-06.jpg',
-      './assets/wuliangye-snake-07.jpg',
-      './assets/wuliangye-snake-08.jpg',
-      './assets/wuliangye-snake-09.jpg',
-      './assets/wuliangye-snake-10.jpg',
-      './assets/wuliangye-snake-11.jpg',
-      './assets/wuliangye-snake-12.jpg',
-      './assets/wuliangye-snake-13.jpg',
-      './assets/wuliangye-snake-14.jpg',
-      './assets/wuliangye-snake-15.jpg',
-      './assets/wuliangye-snake-16.jpg',
-      './assets/wuliangye-snake-17.jpg',
-      './assets/wuliangye-snake-18.jpg',
+      cloudAsset('wuliangye-snake-01.jpg'),
+      cloudAsset('wuliangye-snake-02.jpg'),
+      cloudAsset('wuliangye-snake-03.jpg'),
+      cloudAsset('wuliangye-snake-04.jpg'),
+      cloudAsset('wuliangye-snake-05.jpg'),
+      cloudAsset('wuliangye-snake-06.jpg'),
+      cloudAsset('wuliangye-snake-07.jpg'),
+      cloudAsset('wuliangye-snake-08.jpg'),
+      cloudAsset('wuliangye-snake-09.jpg'),
+      cloudAsset('wuliangye-snake-10.jpg'),
+      cloudAsset('wuliangye-snake-11.jpg'),
+      cloudAsset('wuliangye-snake-12.jpg'),
+      cloudAsset('wuliangye-snake-13.jpg'),
+      cloudAsset('wuliangye-snake-14.jpg'),
+      cloudAsset('wuliangye-snake-15.jpg'),
+      cloudAsset('wuliangye-snake-16.jpg'),
+      cloudAsset('wuliangye-snake-17.jpg'),
+      cloudAsset('wuliangye-snake-18.jpg'),
     ],
   },
   {
     title: '洋河股份天之蓝系列拍摄',
     label: 'YANGHE BLUE CLASSIC',
-    image: './assets/mengzhilan-01.jpg',
+    image: cloudAsset('mengzhilan-01.jpg'),
     text: '以酒体质感、品牌蓝调与场景氛围建立高端白酒视觉记忆。',
     gallery: [
-      './assets/mengzhilan-01.jpg',
-      './assets/mengzhilan-02.jpg',
-      './assets/mengzhilan-03.jpg',
-      './assets/mengzhilan-04.jpg',
-      './assets/mengzhilan-05.jpg',
-      './assets/mengzhilan-06.jpg',
-      './assets/mengzhilan-07.jpg',
-      './assets/mengzhilan-08.jpg',
-      './assets/mengzhilan-09.jpg',
+      cloudAsset('mengzhilan-01.jpg'),
+      cloudAsset('mengzhilan-02.jpg'),
+      cloudAsset('mengzhilan-03.jpg'),
+      cloudAsset('mengzhilan-04.jpg'),
+      cloudAsset('mengzhilan-05.jpg'),
+      cloudAsset('mengzhilan-06.jpg'),
+      cloudAsset('mengzhilan-07.jpg'),
+      cloudAsset('mengzhilan-08.jpg'),
+      cloudAsset('mengzhilan-09.jpg'),
     ],
   },
   {
     title: '京东AI太阳眼镜系列拍摄',
     label: 'JD AI SUNGLASSES',
-    image: './assets/ai-sunglasses-07.jpg',
+    image: cloudAsset('ai-sunglasses-07.jpg'),
     text: '结合智能穿戴属性、人物状态与户外运动场景，呈现更具科技感的太阳眼镜视觉。',
     gallery: [
-      './assets/ai-sunglasses-01.jpg',
-      './assets/ai-sunglasses-02.jpg',
-      './assets/ai-sunglasses-03.jpg',
-      './assets/ai-sunglasses-04.jpg',
-      './assets/ai-sunglasses-05.jpg',
-      './assets/ai-sunglasses-06.jpg',
-      './assets/ai-sunglasses-07.jpg',
-      './assets/ai-sunglasses-08.jpg',
-      './assets/ai-sunglasses-09.jpg',
-      './assets/ai-sunglasses-10.jpg',
-      './assets/ai-sunglasses-11.jpg',
-      './assets/ai-sunglasses-12.jpg',
-      './assets/ai-sunglasses-13.jpg',
-      './assets/ai-sunglasses-14.jpg',
+      cloudAsset('ai-sunglasses-01.jpg'),
+      cloudAsset('ai-sunglasses-02.jpg'),
+      cloudAsset('ai-sunglasses-03.jpg'),
+      cloudAsset('ai-sunglasses-04.jpg'),
+      cloudAsset('ai-sunglasses-05.jpg'),
+      cloudAsset('ai-sunglasses-06.jpg'),
+      cloudAsset('ai-sunglasses-07.jpg'),
+      cloudAsset('ai-sunglasses-08.jpg'),
+      cloudAsset('ai-sunglasses-09.jpg'),
+      cloudAsset('ai-sunglasses-10.jpg'),
+      cloudAsset('ai-sunglasses-11.jpg'),
+      cloudAsset('ai-sunglasses-12.jpg'),
+      cloudAsset('ai-sunglasses-13.jpg'),
+      cloudAsset('ai-sunglasses-14.jpg'),
     ],
   },
   {
     title: '香港首饰系列拍摄',
     label: 'HONG KONG JEWELRY',
-    image: './assets/hk-jewelry-22.jpg',
+    image: cloudAsset('hk-jewelry-22.jpg'),
     text: '以模特状态、妆造氛围与首饰细节呈现轻奢质感，强化佩戴场景与产品记忆。',
     gallery: [
-      './assets/hk-jewelry-01.jpg',
-      './assets/hk-jewelry-02.jpg',
-      './assets/hk-jewelry-03.jpg',
-      './assets/hk-jewelry-04.jpg',
-      './assets/hk-jewelry-05.jpg',
-      './assets/hk-jewelry-06.jpg',
-      './assets/hk-jewelry-07.jpg',
-      './assets/hk-jewelry-08.jpg',
-      './assets/hk-jewelry-09.jpg',
-      './assets/hk-jewelry-10.jpg',
-      './assets/hk-jewelry-11.jpg',
-      './assets/hk-jewelry-12.jpg',
-      './assets/hk-jewelry-13.jpg',
-      './assets/hk-jewelry-14.jpg',
-      './assets/hk-jewelry-15.jpg',
-      './assets/hk-jewelry-16.jpg',
-      './assets/hk-jewelry-17.jpg',
-      './assets/hk-jewelry-18.jpg',
-      './assets/hk-jewelry-19.jpg',
-      './assets/hk-jewelry-20.jpg',
-      './assets/hk-jewelry-21.jpg',
-      './assets/hk-jewelry-22.jpg',
-      './assets/hk-jewelry-23.jpg',
-      './assets/hk-jewelry-24.jpg',
-      './assets/hk-jewelry-25.jpg',
-      './assets/hk-jewelry-26.jpg',
-      './assets/hk-jewelry-27.jpg',
-      './assets/hk-jewelry-28.jpg',
-      './assets/hk-jewelry-29.jpg',
-      './assets/hk-jewelry-30.jpg',
-      './assets/hk-jewelry-31.jpg',
-      './assets/hk-jewelry-32.jpg',
-      './assets/hk-jewelry-33.jpg',
-      './assets/hk-jewelry-34.jpg',
-      './assets/hk-jewelry-35.jpg',
-      './assets/hk-jewelry-36.jpg',
-      './assets/hk-jewelry-37.jpg',
+      cloudAsset('hk-jewelry-01.jpg'),
+      cloudAsset('hk-jewelry-02.jpg'),
+      cloudAsset('hk-jewelry-03.jpg'),
+      cloudAsset('hk-jewelry-04.jpg'),
+      cloudAsset('hk-jewelry-05.jpg'),
+      cloudAsset('hk-jewelry-06.jpg'),
+      cloudAsset('hk-jewelry-07.jpg'),
+      cloudAsset('hk-jewelry-08.jpg'),
+      cloudAsset('hk-jewelry-09.jpg'),
+      cloudAsset('hk-jewelry-10.jpg'),
+      cloudAsset('hk-jewelry-11.jpg'),
+      cloudAsset('hk-jewelry-12.jpg'),
+      cloudAsset('hk-jewelry-13.jpg'),
+      cloudAsset('hk-jewelry-14.jpg'),
+      cloudAsset('hk-jewelry-15.jpg'),
+      cloudAsset('hk-jewelry-16.jpg'),
+      cloudAsset('hk-jewelry-17.jpg'),
+      cloudAsset('hk-jewelry-18.jpg'),
+      cloudAsset('hk-jewelry-19.jpg'),
+      cloudAsset('hk-jewelry-20.jpg'),
+      cloudAsset('hk-jewelry-21.jpg'),
+      cloudAsset('hk-jewelry-22.jpg'),
+      cloudAsset('hk-jewelry-23.jpg'),
+      cloudAsset('hk-jewelry-24.jpg'),
+      cloudAsset('hk-jewelry-25.jpg'),
+      cloudAsset('hk-jewelry-26.jpg'),
+      cloudAsset('hk-jewelry-27.jpg'),
+      cloudAsset('hk-jewelry-28.jpg'),
+      cloudAsset('hk-jewelry-29.jpg'),
+      cloudAsset('hk-jewelry-30.jpg'),
+      cloudAsset('hk-jewelry-31.jpg'),
+      cloudAsset('hk-jewelry-32.jpg'),
+      cloudAsset('hk-jewelry-33.jpg'),
+      cloudAsset('hk-jewelry-34.jpg'),
+      cloudAsset('hk-jewelry-35.jpg'),
+      cloudAsset('hk-jewelry-36.jpg'),
+      cloudAsset('hk-jewelry-37.jpg'),
     ],
   },
   {
     title: '回力1972天猫官方旗舰店我自飞将板鞋拍摄',
     label: 'WARRIOR 1972 TMALL',
-    image: './assets/huili-1972-19.jpg',
+    image: cloudAsset('huili-1972-19.jpg'),
     text: '以国潮板鞋、场景人物与产品细节组合，呈现更有品牌记忆点的电商视觉内容。',
     gallery: [
-      './assets/huili-1972-01.jpg',
-      './assets/huili-1972-02.jpg',
-      './assets/huili-1972-03.jpg',
-      './assets/huili-1972-04.jpg',
-      './assets/huili-1972-05.jpg',
-      './assets/huili-1972-06.jpg',
-      './assets/huili-1972-07.jpg',
-      './assets/huili-1972-08.jpg',
-      './assets/huili-1972-09.jpg',
-      './assets/huili-1972-10.jpg',
-      './assets/huili-1972-11.jpg',
-      './assets/huili-1972-12.jpg',
-      './assets/huili-1972-13.jpg',
-      './assets/huili-1972-14.jpg',
-      './assets/huili-1972-15.jpg',
-      './assets/huili-1972-16.jpg',
-      './assets/huili-1972-17.jpg',
-      './assets/huili-1972-18.jpg',
-      './assets/huili-1972-19.jpg',
-      './assets/huili-1972-20.jpg',
-      './assets/huili-1972-21.jpg',
-      './assets/huili-1972-22.jpg',
-      './assets/huili-1972-23.jpg',
-      './assets/huili-1972-24.jpg',
-      './assets/huili-1972-25.jpg',
-      './assets/huili-1972-26.jpg',
-      './assets/huili-1972-27.jpg',
-      './assets/huili-1972-28.jpg',
-      './assets/huili-1972-29.jpg',
-      './assets/huili-1972-30.jpg',
-      './assets/huili-1972-31.jpg',
-      './assets/huili-1972-32.jpg',
-      './assets/huili-1972-33.jpg',
-      './assets/huili-1972-34.jpg',
-      './assets/huili-1972-35.jpg',
-      './assets/huili-1972-36.jpg',
+      cloudAsset('huili-1972-01.jpg'),
+      cloudAsset('huili-1972-02.jpg'),
+      cloudAsset('huili-1972-03.jpg'),
+      cloudAsset('huili-1972-04.jpg'),
+      cloudAsset('huili-1972-05.jpg'),
+      cloudAsset('huili-1972-06.jpg'),
+      cloudAsset('huili-1972-07.jpg'),
+      cloudAsset('huili-1972-08.jpg'),
+      cloudAsset('huili-1972-09.jpg'),
+      cloudAsset('huili-1972-10.jpg'),
+      cloudAsset('huili-1972-11.jpg'),
+      cloudAsset('huili-1972-12.jpg'),
+      cloudAsset('huili-1972-13.jpg'),
+      cloudAsset('huili-1972-14.jpg'),
+      cloudAsset('huili-1972-15.jpg'),
+      cloudAsset('huili-1972-16.jpg'),
+      cloudAsset('huili-1972-17.jpg'),
+      cloudAsset('huili-1972-18.jpg'),
+      cloudAsset('huili-1972-19.jpg'),
+      cloudAsset('huili-1972-20.jpg'),
+      cloudAsset('huili-1972-21.jpg'),
+      cloudAsset('huili-1972-22.jpg'),
+      cloudAsset('huili-1972-23.jpg'),
+      cloudAsset('huili-1972-24.jpg'),
+      cloudAsset('huili-1972-25.jpg'),
+      cloudAsset('huili-1972-26.jpg'),
+      cloudAsset('huili-1972-27.jpg'),
+      cloudAsset('huili-1972-28.jpg'),
+      cloudAsset('huili-1972-29.jpg'),
+      cloudAsset('huili-1972-30.jpg'),
+      cloudAsset('huili-1972-31.jpg'),
+      cloudAsset('huili-1972-32.jpg'),
+      cloudAsset('huili-1972-33.jpg'),
+      cloudAsset('huili-1972-34.jpg'),
+      cloudAsset('huili-1972-35.jpg'),
+      cloudAsset('huili-1972-36.jpg'),
     ],
   },
 ];
@@ -336,7 +337,7 @@ const ecommerceVideoCards = [
   {
     title: '首饰主图视频',
     label: 'JEWELRY MAIN VIDEO',
-    image: './assets/jewelry-main-video-cover.jpg',
+    image: cloudAsset('jewelry-main-video-cover.jpg'),
     videoPreview: videoAsset('jewelry-main-video-01.mp4'),
     videos: [
       videoAsset('jewelry-main-video-01.mp4'),
@@ -410,42 +411,42 @@ const navServices = [
 const partnerLogos = [
   {
     name: '华为',
-    image: './assets/partners/huawei.png',
+    image: cloudAsset('partners/huawei.png'),
     size: 'mark',
   },
   {
     name: '恩威集团',
-    image: './assets/partners/enwei.png',
+    image: cloudAsset('partners/enwei.png'),
     size: 'wide',
   },
   {
     name: '百草味',
-    image: './assets/partners/baicaowei.png',
+    image: cloudAsset('partners/baicaowei.png'),
     size: 'wide',
   },
   {
     name: '绿色品牌',
-    image: './assets/partners/green.png',
+    image: cloudAsset('partners/green.png'),
     size: 'wide',
   },
   {
     name: '洋河股份',
-    image: './assets/partners/yanghe.png',
+    image: cloudAsset('partners/yanghe.png'),
     size: 'wide',
   },
   {
     name: '五粮液官方旗舰店',
-    image: './assets/partners/wuliangye.png',
+    image: cloudAsset('partners/wuliangye.png'),
     size: 'mark',
   },
   {
     name: '回力 1927',
-    image: './assets/partners/huili.png',
+    image: cloudAsset('partners/huili.png'),
     size: 'huili',
   },
   {
     name: '新希望乳业',
-    image: './assets/partners/new-hope-wide.png',
+    image: cloudAsset('partners/new-hope-wide.png'),
     size: 'wide',
   },
 ];
@@ -498,7 +499,7 @@ function PortfolioNav({ pinned }) {
   return (
     <nav className={`hero-nav ${pinned ? 'is-pinned' : ''}`} aria-label="服务导航">
       <a className="hero-nav-logo" href="#home" aria-label="返回首页">
-        <img src="./assets/personal-logo.png" alt="柒月映画" />
+        <img src={cloudAsset('personal-logo.png')} alt="柒月映画" />
       </a>
       <button
         className="hero-nav-menu-toggle"
@@ -547,7 +548,7 @@ function Partners() {
           colors={['#38bdf8', '#c084fc', '#f472b6']}
           fillOpacity={0.38}
         >
-          <img className="profile-handshake" src="./assets/handshake-reference.png" alt="合作握手视觉" />
+          <img className="profile-handshake" src={cloudAsset('handshake-reference.png')} alt="合作握手视觉" />
         </BorderGlow>
 
         <BorderGlow
@@ -614,7 +615,7 @@ function Hero() {
         muted
         loop
         playsInline
-        poster="./assets/fluid-glass-hero.jpeg"
+        poster={cloudAsset('fluid-glass-hero.jpeg')}
       >
         <source src={videoAsset('hero-background-video.mp4')} type="video/mp4" />
       </video>
@@ -1054,7 +1055,7 @@ function ContactSection() {
   return (
     <section className="contact-section" id="contact">
       <div className="container contact-inner">
-        <img className="contact-logo" src="./assets/personal-logo.png" alt="柒月映画" />
+        <img className="contact-logo" src={cloudAsset('personal-logo.png')} alt="柒月映画" />
         <h2>
           <span>让下一个视觉项目，</span>
           <span>从一次清晰的沟通开始。</span>
@@ -1063,7 +1064,7 @@ function ContactSection() {
           可合作方向：品牌视觉系统、智能视觉创意、商业摄影、电商视觉、广告片 / 短视频内容、亚马逊拍摄设计与整合型宣传物料。
         </p>
         <div className="contact-message-card">
-          <img className="contact-handshake" src="./assets/handshake-reference.png" alt="" aria-hidden="true" />
+          <img className="contact-handshake" src={cloudAsset('handshake-reference.png')} alt="" aria-hidden="true" />
           <p>
             谢谢观看，图片作品更新过快，篇幅过长，这里就不做展示了，详细可以联系我们。
           </p>
