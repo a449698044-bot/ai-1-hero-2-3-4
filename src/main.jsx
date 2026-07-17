@@ -19,7 +19,6 @@ import {
   X,
 } from 'lucide-react';
 import BorderGlow from './BorderGlow';
-import usePortfolioMotion from './usePortfolioMotion';
 import './styles.css';
 
 const COS_ASSET_BASE = 'https://qiyue-1455073558.cos.ap-guangzhou.myqcloud.com/videos';
@@ -453,7 +452,6 @@ const partnerLogos = [
 
 function App() {
   const [isNavPinned, setIsNavPinned] = useState(false);
-  usePortfolioMotion();
 
   useEffect(() => {
     const targetId = window.location.hash.slice(1);
@@ -605,10 +603,6 @@ function Partners() {
 function Hero() {
   return (
     <section className="hero" id="home" aria-label="首页">
-      <div className="hero-opening-curtain" aria-hidden="true">
-        <span />
-        <span />
-      </div>
       <video
         className="hero-video"
         autoPlay

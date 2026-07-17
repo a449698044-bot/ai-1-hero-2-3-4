@@ -3677,16 +3677,6 @@ body.is-commerce-video-open .hero-nav {
     bottom: max(24px, calc(env(safe-area-inset-bottom) + 10px));
   }
 
-  .portfolio-motion-active .hero-video,
-  .portfolio-motion-active .hero-nav,
-  .portfolio-motion-active .hero h1 span,
-  .portfolio-motion-active .tvc-cover-video,
-  .portfolio-motion-active .scene-card img,
-  .portfolio-motion-active .commerce-video-card img,
-  .portfolio-motion-active .commerce-card-cover-video,
-  .portfolio-motion-active .contact-handshake {
-    will-change: auto;
-  }
 }
 
 @media (max-width: 360px) {
@@ -8550,66 +8540,11 @@ body {
   box-shadow: 0 42px 100px rgba(0, 0, 0, 0.48) !important;
 }
 
-/* Portfolio motion system: cinematic reveal, stagger and subtle parallax. */
-.hero-opening-curtain {
-  position: absolute;
-  inset: 0;
-  z-index: 30;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.hero-opening-curtain span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #0d0d0d;
-  will-change: transform;
-}
-
-.hero-opening-curtain span:first-child {
-  transform-origin: top;
-}
-
-.hero-opening-curtain span:last-child {
-  transform-origin: bottom;
-}
-
-.portfolio-motion-active .hero-video,
-.portfolio-motion-active .hero-nav,
-.portfolio-motion-active .hero h1 span,
-.portfolio-motion-active .tvc-cover-video,
-.portfolio-motion-active .scene-card img,
-.portfolio-motion-active .commerce-video-card img,
-.portfolio-motion-active .commerce-card-cover-video,
-.portfolio-motion-active .contact-handshake {
-  will-change: transform, opacity, clip-path;
-}
-
 .profile-heading h2,
 .tvc-heading p,
 .scene-copy p,
 .commerce-video-heading p {
   transform-origin: left center;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-opening-curtain {
-    display: none;
-  }
-
-  .portfolio-motion-active .hero-video,
-  .portfolio-motion-active .hero-nav,
-  .portfolio-motion-active .hero h1 span,
-  .portfolio-motion-active .tvc-cover-video,
-  .portfolio-motion-active .scene-card img,
-  .portfolio-motion-active .commerce-video-card img,
-  .portfolio-motion-active .commerce-card-cover-video,
-  .portfolio-motion-active .contact-handshake {
-    will-change: auto;
-  }
 }
 
 /* Refine the closing composition and blend in the handshake artwork. */
@@ -8782,16 +8717,6 @@ body {
     bottom: max(24px, calc(env(safe-area-inset-bottom) + 10px));
   }
 
-  .portfolio-motion-active .hero-video,
-  .portfolio-motion-active .hero-nav,
-  .portfolio-motion-active .hero h1 span,
-  .portfolio-motion-active .tvc-cover-video,
-  .portfolio-motion-active .scene-card img,
-  .portfolio-motion-active .commerce-video-card img,
-  .portfolio-motion-active .commerce-card-cover-video,
-  .portfolio-motion-active .contact-handshake {
-    will-change: auto;
-  }
 }
 
 @media (max-width: 360px) {
