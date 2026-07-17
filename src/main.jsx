@@ -499,7 +499,7 @@ function PortfolioNav({ pinned }) {
   return (
     <nav className={`hero-nav ${pinned ? 'is-pinned' : ''}`} aria-label="服务导航">
       <a className="hero-nav-logo" href="#home" aria-label="返回首页">
-        <img src={cloudAsset('personal-logo.png')} alt="柒月映画" />
+        <img src="./assets/personal-logo.png" alt="柒月映画" />
       </a>
       <button
         className="hero-nav-menu-toggle"
@@ -548,7 +548,7 @@ function Partners() {
           colors={['#38bdf8', '#c084fc', '#f472b6']}
           fillOpacity={0.38}
         >
-          <img className="profile-handshake" src={cloudAsset('handshake-reference.png')} alt="合作握手视觉" />
+          <img className="profile-handshake" src="./assets/handshake-reference.png" alt="合作握手视觉" />
         </BorderGlow>
 
         <BorderGlow
@@ -615,7 +615,7 @@ function Hero() {
         muted
         loop
         playsInline
-        poster={cloudAsset('fluid-glass-hero.jpeg')}
+        poster="./assets/fluid-glass-hero.jpeg"
       >
         <source src={videoAsset('hero-background-video.mp4')} type="video/mp4" />
       </video>
@@ -1055,7 +1055,7 @@ function ContactSection() {
   return (
     <section className="contact-section" id="contact">
       <div className="container contact-inner">
-        <img className="contact-logo" src={cloudAsset('personal-logo.png')} alt="柒月映画" />
+        <img className="contact-logo" src="./assets/personal-logo.png" alt="柒月映画" />
         <h2>
           <span>让下一个视觉项目，</span>
           <span>从一次清晰的沟通开始。</span>
@@ -1064,7 +1064,7 @@ function ContactSection() {
           可合作方向：品牌视觉系统、智能视觉创意、商业摄影、电商视觉、广告片 / 短视频内容、亚马逊拍摄设计与整合型宣传物料。
         </p>
         <div className="contact-message-card">
-          <img className="contact-handshake" src={cloudAsset('handshake-reference.png')} alt="" aria-hidden="true" />
+          <img className="contact-handshake" src="./assets/handshake-reference.png" alt="" aria-hidden="true" />
           <p>
             谢谢观看，图片作品更新过快，篇幅过长，这里就不做展示了，详细可以联系我们。
           </p>

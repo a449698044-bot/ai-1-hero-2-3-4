@@ -18,3 +18,6 @@ public/assets/**/*.jpeg
 public/assets/**/*.png
 public/assets/**/*.webp
 public/assets/**/*.svg
+!public/assets/personal-logo.png
+!public/assets/handshake-reference.png
+!public/assets/fluid-glass-hero.jpeg
