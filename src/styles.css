@@ -3712,14 +3712,29 @@ body.is-commerce-video-open .hero-nav {
 }
 
 .tvc-cover-video {
+  opacity: 0 !important;
+}
+
+.tvc-cover-video.is-ready {
   opacity: 0.58 !important;
+}
+
+.tvc-cover-poster.is-hidden {
+  opacity: 0 !important;
 }
 
 .tvc-column:hover .tvc-cover-poster,
 .tvc-column:hover .tvc-cover-video {
-  opacity: 0.5 !important;
   filter: saturate(0.72) contrast(1.12) brightness(0.64) !important;
   transform: scale(1.08) !important;
+}
+
+.tvc-column:hover .tvc-cover-poster:not(.is-hidden) {
+  opacity: 0.5 !important;
+}
+
+.tvc-column:hover .tvc-cover-video.is-ready {
+  opacity: 0.5 !important;
 }
 
 @media (max-width: 760px) {
@@ -3796,8 +3811,11 @@ body.is-commerce-video-open .hero-nav {
   }
 
   .tvc-cover-video {
-    opacity: 0.56 !important;
     filter: saturate(0.95) contrast(1.08) brightness(0.68) !important;
+  }
+
+  .tvc-cover-video.is-ready {
+    opacity: 0.56 !important;
   }
 }
 

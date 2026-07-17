@@ -90,6 +90,7 @@ const tvcColumns = [
     title: '旗舰店新品发布视频',
     items: ['产品卖点视频', '场景故事情节片', '电商主推视频'],
     video: videoAsset('product-launch-tvc.mp4'),
+    coverVideo: videoAsset('women-shoe-main-video-01.m4v'),
     poster: cloudAsset('project-content.png'),
     coverTime: 3.2,
   },
@@ -374,18 +375,23 @@ const ecommerceVideoCards = [
   },
 ];
 
-function TvcVideoCover({ src, poster, coverTime = 1.5 }) {
+function TvcVideoCover({ src, coverVideo, poster, coverTime = 1.5 }) {
   const videoRef = React.useRef(null);
+  const [currentSrc, setCurrentSrc] = useState(coverVideo || src);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return undefined;
+
+    setIsVideoReady(false);
 
     const seekToCover = () => {
       const safeTime = Math.min(coverTime, Math.max(video.duration - 0.2, 0));
       if (Number.isFinite(safeTime)) video.currentTime = safeTime;
     };
     const playCover = () => {
+      setIsVideoReady(true);
       video.play().catch(() => {});
     };
 
@@ -395,21 +401,32 @@ function TvcVideoCover({ src, poster, coverTime = 1.5 }) {
       video.removeEventListener('loadedmetadata', seekToCover);
       video.removeEventListener('canplay', playCover);
     };
-  }, [coverTime]);
+  }, [coverTime, currentSrc]);
 
   return (
     <>
-      {poster && <img className="tvc-cover-poster" src={poster} alt="" aria-hidden="true" />}
+      {poster && (
+        <img
+          className={`tvc-cover-poster ${isVideoReady ? 'is-hidden' : ''}`}
+          src={poster}
+          alt=""
+          aria-hidden="true"
+        />
+      )}
       <video
         ref={videoRef}
-        className="tvc-cover-video"
-        src={src}
+        className={`tvc-cover-video ${isVideoReady ? 'is-ready' : ''}`}
+        src={currentSrc}
         poster={poster}
         muted
         autoPlay
         loop
         playsInline
         preload="auto"
+        onError={() => {
+          setIsVideoReady(false);
+          if (coverVideo && currentSrc !== coverVideo) setCurrentSrc(coverVideo);
+        }}
         aria-hidden="true"
       />
     </>
@@ -701,7 +718,14 @@ function Projects() {
         <div className="tvc-grid">
           {tvcColumns.map((column) => (
             <article className="tvc-column" key={column.number}>
-              {column.video && <TvcVideoCover src={column.video} poster={column.poster} coverTime={column.coverTime} />}
+              {column.video && (
+                <TvcVideoCover
+                  src={column.video}
+                  coverVideo={column.coverVideo}
+                  poster={column.poster}
+                  coverTime={column.coverTime}
+                />
+              )}
               <div>
                 <strong>{column.number}</strong>
                 <span>{column.title}</span>
@@ -711,7 +735,7 @@ function Projects() {
                   className="tvc-play-button"
                   type="button"
                   aria-label="播放回力1927TVC宣传视频"
-                  onClick={() => setActiveVideo(column.video)}
+                  onClick={() => setActiveVideo(column.coverVideo || column.video)}
                 >
                   <Play size={34} fill="currentColor" />
                 </button>
