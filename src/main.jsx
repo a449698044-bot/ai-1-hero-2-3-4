@@ -375,7 +375,7 @@ const ecommerceVideoCards = [
   },
 ];
 
-function TvcVideoCover({ src, coverVideo, poster, coverTime = 1.5 }) {
+function TvcVideoCover({ src, coverVideo, coverTime = 1.5 }) {
   const videoRef = React.useRef(null);
   const [currentSrc, setCurrentSrc] = useState(coverVideo || src);
   const [isVideoReady, setIsVideoReady] = useState(false);
@@ -404,32 +404,21 @@ function TvcVideoCover({ src, coverVideo, poster, coverTime = 1.5 }) {
   }, [coverTime, currentSrc]);
 
   return (
-    <>
-      {poster && (
-        <img
-          className={`tvc-cover-poster ${isVideoReady ? 'is-hidden' : ''}`}
-          src={poster}
-          alt=""
-          aria-hidden="true"
-        />
-      )}
-      <video
-        ref={videoRef}
-        className={`tvc-cover-video ${isVideoReady ? 'is-ready' : ''}`}
-        src={currentSrc}
-        poster={poster}
-        muted
-        autoPlay
-        loop
-        playsInline
-        preload="auto"
-        onError={() => {
-          setIsVideoReady(false);
-          if (coverVideo && currentSrc !== coverVideo) setCurrentSrc(coverVideo);
-        }}
-        aria-hidden="true"
-      />
-    </>
+    <video
+      ref={videoRef}
+      className={`tvc-cover-video ${isVideoReady ? 'is-ready' : ''}`}
+      src={currentSrc}
+      muted
+      autoPlay
+      loop
+      playsInline
+      preload="auto"
+      onError={() => {
+        setIsVideoReady(false);
+        if (coverVideo && currentSrc !== coverVideo) setCurrentSrc(coverVideo);
+      }}
+      aria-hidden="true"
+    />
   );
 }
 
@@ -722,7 +711,6 @@ function Projects() {
                 <TvcVideoCover
                   src={column.video}
                   coverVideo={column.coverVideo}
-                  poster={column.poster}
                   coverTime={column.coverTime}
                 />
               )}

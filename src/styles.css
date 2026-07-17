@@ -3697,7 +3697,6 @@ body.is-commerce-video-open .hero-nav {
 }
 
 /* Deployment-end overrides: TVC cover fallback + mobile profile compaction. */
-.tvc-cover-poster,
 .tvc-cover-video {
   position: absolute !important;
   inset: 0 !important;
@@ -3705,7 +3704,7 @@ body.is-commerce-video-open .hero-nav {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  opacity: 0.22 !important;
+  opacity: 0 !important;
   filter: saturate(0.82) contrast(1.08) brightness(0.72) !important;
   transform: scale(1.04) !important;
   pointer-events: none !important;
@@ -3719,18 +3718,9 @@ body.is-commerce-video-open .hero-nav {
   opacity: 0.58 !important;
 }
 
-.tvc-cover-poster.is-hidden {
-  opacity: 0 !important;
-}
-
-.tvc-column:hover .tvc-cover-poster,
 .tvc-column:hover .tvc-cover-video {
   filter: saturate(0.72) contrast(1.12) brightness(0.64) !important;
   transform: scale(1.08) !important;
-}
-
-.tvc-column:hover .tvc-cover-poster:not(.is-hidden) {
-  opacity: 0.5 !important;
 }
 
 .tvc-column:hover .tvc-cover-video.is-ready {
@@ -3804,10 +3794,6 @@ body.is-commerce-video-open .hero-nav {
     margin-top: 7px !important;
     font-size: 11px !important;
     line-height: 1.2 !important;
-  }
-
-  .tvc-cover-poster {
-    opacity: 0.22 !important;
   }
 
   .tvc-cover-video {
