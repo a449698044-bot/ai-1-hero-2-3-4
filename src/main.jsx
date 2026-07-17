@@ -90,7 +90,6 @@ const tvcColumns = [
     title: '旗舰店新品发布视频',
     items: ['产品卖点视频', '场景故事情节片', '电商主推视频'],
     video: videoAsset('product-launch-tvc.mp4'),
-    coverVideo: videoAsset('women-shoe-main-video-01.m4v'),
     poster: cloudAsset('project-content.png'),
     coverTime: 3.2,
   },
