@@ -619,8 +619,7 @@ function Hero() {
         <div className="hero-text-box">
           <h1 aria-label="只做具有销售力的，视觉策划，商业视觉。">
             <span>只做具有销售力的，</span>
-            <span>视觉策划，</span>
-            <span>商业视觉。</span>
+            <span>视觉策划，商业视觉。</span>
           </h1>
         </div>
       </div>
