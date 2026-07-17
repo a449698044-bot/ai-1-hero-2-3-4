@@ -3705,19 +3705,19 @@ body.is-commerce-video-open .hero-nav {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  opacity: 0.5 !important;
+  opacity: 0.22 !important;
   filter: saturate(0.82) contrast(1.08) brightness(0.72) !important;
   transform: scale(1.04) !important;
   pointer-events: none !important;
 }
 
 .tvc-cover-video {
-  opacity: 0.34 !important;
+  opacity: 0.58 !important;
 }
 
 .tvc-column:hover .tvc-cover-poster,
 .tvc-column:hover .tvc-cover-video {
-  opacity: 0.34 !important;
+  opacity: 0.5 !important;
   filter: saturate(0.72) contrast(1.12) brightness(0.64) !important;
   transform: scale(1.08) !important;
 }
@@ -3746,30 +3746,42 @@ body.is-commerce-video-open .hero-nav {
     font-size: 20px !important;
   }
 
+  .profile-intro {
+    order: 2 !important;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+  }
+
   .profile-stat,
   .profile-stat-1,
   .profile-stat-2,
   .profile-stat-3 {
-    order: 2 !important;
+    order: 3 !important;
     grid-column: auto !important;
     grid-row: auto !important;
     width: 100% !important;
-    min-height: 96px !important;
-    height: 96px !important;
+    min-height: 104px !important;
+    height: 104px !important;
   }
 
   .profile-stat > .border-glow-inner,
   .profile-stat-3 > .border-glow-inner {
-    min-height: 96px !important;
-    padding: 16px 10px !important;
+    min-height: 104px !important;
+    padding: 15px 8px !important;
     align-content: center !important;
   }
 
   .profile-stat strong,
   .profile-stat-3 strong {
-    font-size: clamp(22px, 7vw, 34px) !important;
+    font-size: clamp(20px, 6.5vw, 30px) !important;
     line-height: 1 !important;
     white-space: nowrap !important;
+  }
+
+  .profile-stat-3 strong {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.12 !important;
+    white-space: normal !important;
   }
 
   .profile-stat span,
@@ -3779,10 +3791,13 @@ body.is-commerce-video-open .hero-nav {
     line-height: 1.2 !important;
   }
 
-  .profile-intro {
-    order: 3 !important;
-    grid-column: 1 / -1 !important;
-    grid-row: auto !important;
+  .tvc-cover-poster {
+    opacity: 0.22 !important;
+  }
+
+  .tvc-cover-video {
+    opacity: 0.56 !important;
+    filter: saturate(0.95) contrast(1.08) brightness(0.68) !important;
   }
 }
 
@@ -9036,19 +9051,19 @@ body {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  opacity: 0.5 !important;
+  opacity: 0.22 !important;
   filter: saturate(0.82) contrast(1.08) brightness(0.72) !important;
   transform: scale(1.04) !important;
   pointer-events: none !important;
 }
 
 .tvc-cover-video {
-  opacity: 0.34 !important;
+  opacity: 0.58 !important;
 }
 
 .tvc-column:hover .tvc-cover-poster,
 .tvc-column:hover .tvc-cover-video {
-  opacity: 0.34 !important;
+  opacity: 0.5 !important;
   filter: saturate(0.72) contrast(1.12) brightness(0.64) !important;
   transform: scale(1.08) !important;
 }
@@ -9081,26 +9096,32 @@ body {
   .profile-stat-1,
   .profile-stat-2,
   .profile-stat-3 {
-    order: 2 !important;
+    order: 3 !important;
     grid-column: auto !important;
     grid-row: auto !important;
     width: 100% !important;
-    min-height: 96px !important;
-    height: 96px !important;
+    min-height: 104px !important;
+    height: 104px !important;
   }
 
   .profile-stat > .border-glow-inner,
   .profile-stat-3 > .border-glow-inner {
-    min-height: 96px !important;
-    padding: 16px 10px !important;
+    min-height: 104px !important;
+    padding: 15px 8px !important;
     align-content: center !important;
   }
 
   .profile-stat strong,
   .profile-stat-3 strong {
-    font-size: clamp(22px, 7vw, 34px) !important;
+    font-size: clamp(20px, 6.5vw, 30px) !important;
     line-height: 1 !important;
     white-space: nowrap !important;
+  }
+
+  .profile-stat-3 strong {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.12 !important;
+    white-space: normal !important;
   }
 
   .profile-stat span,
@@ -9111,8 +9132,17 @@ body {
   }
 
   .profile-intro {
-    order: 3 !important;
+    order: 2 !important;
     grid-column: 1 / -1 !important;
     grid-row: auto !important;
+  }
+
+  .tvc-cover-poster {
+    opacity: 0.22 !important;
+  }
+
+  .tvc-cover-video {
+    opacity: 0.56 !important;
+    filter: saturate(0.95) contrast(1.08) brightness(0.68) !important;
   }
 }

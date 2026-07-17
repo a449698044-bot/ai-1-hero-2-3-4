@@ -385,9 +385,16 @@ function TvcVideoCover({ src, poster, coverTime = 1.5 }) {
       const safeTime = Math.min(coverTime, Math.max(video.duration - 0.2, 0));
       if (Number.isFinite(safeTime)) video.currentTime = safeTime;
     };
+    const playCover = () => {
+      video.play().catch(() => {});
+    };
 
     video.addEventListener('loadedmetadata', seekToCover);
-    return () => video.removeEventListener('loadedmetadata', seekToCover);
+    video.addEventListener('canplay', playCover);
+    return () => {
+      video.removeEventListener('loadedmetadata', seekToCover);
+      video.removeEventListener('canplay', playCover);
+    };
   }, [coverTime]);
 
   return (
@@ -399,8 +406,10 @@ function TvcVideoCover({ src, poster, coverTime = 1.5 }) {
         src={src}
         poster={poster}
         muted
+        autoPlay
+        loop
         playsInline
-        preload="metadata"
+        preload="auto"
         aria-hidden="true"
       />
     </>
