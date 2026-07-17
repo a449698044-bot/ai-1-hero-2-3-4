@@ -82,6 +82,7 @@ const tvcColumns = [
     title: '回力1927TVC宣传视频',
     items: ['形象广告片', '品牌故事片'],
     video: videoAsset('huili-1927-tvc.m4v'),
+    poster: cloudAsset('huili-1972-19.jpg'),
     coverTime: 2.8,
   },
   {
@@ -89,6 +90,7 @@ const tvcColumns = [
     title: '旗舰店新品发布视频',
     items: ['产品卖点视频', '场景故事情节片', '电商主推视频'],
     video: videoAsset('product-launch-tvc.mp4'),
+    poster: cloudAsset('project-content.png'),
     coverTime: 3.2,
   },
   {
@@ -96,6 +98,7 @@ const tvcColumns = [
     title: '白酒Tvc视频',
     items: ['白酒视频拍摄', '产品动态展示'],
     video: videoAsset('baijiu-tvc-collection.m4v'),
+    poster: cloudAsset('wuliangye-snake-15.jpg'),
     coverTime: 4.5,
   },
 ];
@@ -371,7 +374,7 @@ const ecommerceVideoCards = [
   },
 ];
 
-function TvcVideoCover({ src, coverTime = 1.5 }) {
+function TvcVideoCover({ src, poster, coverTime = 1.5 }) {
   const videoRef = React.useRef(null);
 
   useEffect(() => {
@@ -388,15 +391,19 @@ function TvcVideoCover({ src, coverTime = 1.5 }) {
   }, [coverTime]);
 
   return (
-    <video
-      ref={videoRef}
-      className="tvc-cover-video"
-      src={src}
-      muted
-      playsInline
-      preload="metadata"
-      aria-hidden="true"
-    />
+    <>
+      {poster && <img className="tvc-cover-poster" src={poster} alt="" aria-hidden="true" />}
+      <video
+        ref={videoRef}
+        className="tvc-cover-video"
+        src={src}
+        poster={poster}
+        muted
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
+    </>
   );
 }
 
@@ -685,7 +692,7 @@ function Projects() {
         <div className="tvc-grid">
           {tvcColumns.map((column) => (
             <article className="tvc-column" key={column.number}>
-              {column.video && <TvcVideoCover src={column.video} coverTime={column.coverTime} />}
+              {column.video && <TvcVideoCover src={column.video} poster={column.poster} coverTime={column.coverTime} />}
               <div>
                 <strong>{column.number}</strong>
                 <span>{column.title}</span>
